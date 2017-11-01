@@ -878,4 +878,16 @@ If the parameter can be null, ignore this inspection result; passing a null valu
   <data name="ReplaceIfElseWithConditionalStatementQuickFix" xml:space="preserve">
     <value>Replace If/Else with single assignment</value>
   </data>
+  <data name="ParameterlessCellsInspectionMeta" xml:space="preserve">
+    <value>Parameterless calls to the Cells property of the Range class is redundant.</value>
+  </data>
+  <data name="ParameterlessCellsInspectionName" xml:space="preserve">
+    <value>Parameterless Cells is redundant</value>
+  </data>
+  <data name="ParameterlessCellsInspectionQuickFix" xml:space="preserve">
+    <value>Remove calls to Cells</value>
+  </data>
+  <data name="ParameterlessCellsInspectionResultFormat" xml:space="preserve">
+    <value>Redundant call to Range.Cells</value>
+  </data>
 </root>

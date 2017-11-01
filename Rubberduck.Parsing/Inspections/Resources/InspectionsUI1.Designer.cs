@@ -1609,6 +1609,42 @@ namespace Rubberduck.Parsing.Inspections.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Parameterless calls to the Cells property of the Range class is redundant..
+        /// </summary>
+        public static string ParameterlessCellsInspectionMeta {
+            get {
+                return ResourceManager.GetString("ParameterlessCellsInspectionMeta", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Parameterless Cells is redundant.
+        /// </summary>
+        public static string ParameterlessCellsInspectionName {
+            get {
+                return ResourceManager.GetString("ParameterlessCellsInspectionName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Remove calls to Cells.
+        /// </summary>
+        public static string ParameterlessCellsInspectionQuickFix {
+            get {
+                return ResourceManager.GetString("ParameterlessCellsInspectionQuickFix", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Redundant call to Range.Cells.
+        /// </summary>
+        public static string ParameterlessCellsInspectionResultFormat {
+            get {
+                return ResourceManager.GetString("ParameterlessCellsInspectionResultFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to A parameter is passed into a member that does not use it. Consider removing that parameter..
         /// </summary>
         public static string ParameterNotUsedInspectionMeta {

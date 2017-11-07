@@ -889,5 +889,14 @@ If the parameter can be null, ignore this inspection result; passing a null valu
   </data>
   <data name="ObsoleteErrorSyntaxInspectionName" xml:space="preserve">
     <value>Use of 'Error' statement</value>
+  <data name="ImplicitEnumAssignmentInspectionMeta" xml:space="preserve">
+    <value>Implicit Enum assignment auto-increments from 0, or the prior explicitly assigned member.</value>
+  </data>
+  <data name="ImplicitEnumAssignmentInspectionName" xml:space="preserve">
+    <value>Implicit Enum assignment</value>
+  </data>
+  <data name="ImplicitEnumAssignmentInspectionResultFormat" xml:space="preserve">
+    <value>Enum '{0}' is implicitly assigned</value>
+    <comment>{0} enum name</comment>
   </data>
 </root>

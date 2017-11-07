@@ -880,6 +880,33 @@ namespace Rubberduck.Parsing.Inspections.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Implicit Enum assignment auto-increments from 0, or the prior explicitly assigned member..
+        /// </summary>
+        public static string ImplicitEnumAssignmentInspectionMeta {
+            get {
+                return ResourceManager.GetString("ImplicitEnumAssignmentInspectionMeta", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Implicit Enum assignment.
+        /// </summary>
+        public static string ImplicitEnumAssignmentInspectionName {
+            get {
+                return ResourceManager.GetString("ImplicitEnumAssignmentInspectionName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enum &apos;{0}&apos; is implicitly assigned.
+        /// </summary>
+        public static string ImplicitEnumAssignmentInspectionResultFormat {
+            get {
+                return ResourceManager.GetString("ImplicitEnumAssignmentInspectionResultFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Module members are public by default, which can be counter-intuitive. Consider specifying explicit access modifiers to avoid ambiguity..
         /// </summary>
         public static string ImplicitPublicMemberInspectionMeta {

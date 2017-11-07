@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using Antlr4.Runtime;
+using Antlr4.Runtime.Misc;
 using Rubberduck.Common;
 using Rubberduck.Inspections.Abstract;
 using Rubberduck.Inspections.Results;
@@ -25,6 +26,7 @@ namespace Rubberduck.Inspections.Concrete
 
         protected override IEnumerable<IInspectionResult> DoGetInspectionResults()
         {
+            var cellRef = State.DeclarationFinder.MatchName("Cells");
             var cellsReferences = State.DeclarationFinder.MatchName("Cells")
                 .Where(member => member.AsTypeName == "Range"
                                  && member.References.Any()
@@ -50,9 +52,17 @@ namespace Rubberduck.Inspections.Concrete
             _contexts.Clear();
         }
 
-        public override void ExitArgList(VBAParser.ArgListContext context)
+        public override void ExitArgumentExpression(VBAParser.ArgumentExpressionContext context)
         {
 
+        }
+
+        public override void ExitArgumentList(VBAParser.ArgumentListContext context)
+        {
+            if (context.Parent.GetText().Contains("Cells"))
+            {
+                _contexts.Add(new QualifiedContext<ParserRuleContext>(CurrentModuleName, context));
+            }
         }
     }
 }

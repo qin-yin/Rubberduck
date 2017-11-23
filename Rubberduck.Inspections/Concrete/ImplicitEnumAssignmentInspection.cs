@@ -26,8 +26,9 @@ namespace Rubberduck.Inspections.Concrete
 
         protected override IEnumerable<IInspectionResult> DoGetInspectionResults()
         {
-            var test = Listener.Contexts;
-            return null;
+            return Listener.Contexts.Select(context => new QualifiedContextInspectionResult(this,
+                                                                string.Format(InspectionsUI.ImplicitEnumAssignmentInspectionResultFormat, context.Context.start.Text),
+                                                                context));
         }
     }
 
@@ -46,7 +47,7 @@ namespace Rubberduck.Inspections.Concrete
 
         public override void ExitEnumerationStmt(VBAParser.EnumerationStmtContext context)
         {
-            foreach (VBAParser.EnumerationStmt_ConstantContext enumeratorContext in context.enumerationStmt_Constant())
+            foreach (var enumeratorContext in context.enumerationStmt_Constant())
             {
                 if (enumeratorContext.expression() == null)
                 {
